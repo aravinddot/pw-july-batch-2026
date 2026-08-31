@@ -364,6 +364,54 @@ test.describe('Sandbox Advanced Test cases', ()=> {
 
 
 
+    test('Advanced Wait commands', async({page})=> {
+
+        await page.goto('https://playwright-mastery-academy-app.vercel.app/practice/sandbox-advanced')
+
+        // await page.getByTestId('wait-navigation-link').click()
+
+        // await page.waitForURL('https://playwright-mastery-academy-app.vercel.app/practice/popup?source=waitfornavigation')
+
+        // await expect(page.getByText('Popup Opened Successfully')).toBeVisible()
+
+
+        // await page.getByTestId('wait-response-btn').click()
+
+        // await page.waitForResponse('https://playwright-mastery-academy-app.vercel.app/api/practice/waits-status')
+
+        // await expect(page.getByText('Trigger API Response Completed')).toBeVisible()
+
+
+          await page.getByTestId('wait-response-btn').click()
+
+        await page.getByText('Trigger API Response Completed').waitFor({state: 'visible'})
+
+        await expect(page.getByText('Trigger API Response Completed')).toBeVisible()
+
+
+        //  visible, hidden, attached, detached
+
+      //  visible = element should be visible in UI, Exists in DOM
+
+      // hidden = locator should not be visible in UI, exists in DOM
+
+      // attached = DOM exists, may or may not be visible in UI
+
+      // detached = should not be visible in UI and should not exist in DOM
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
 
 
 
