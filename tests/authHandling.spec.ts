@@ -1,5 +1,6 @@
 import { test, expect, Browser, BrowserContext, Page, chromium } from '@playwright/test';
 
+// Only for single user application
 
 test.describe('Authentication Handling', () => {
 
