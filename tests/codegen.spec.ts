@@ -5,6 +5,7 @@ test('test', async ({ page }) => {
   await page.getByTestId('single-click-btn').click();
   await expect(page.getByTestId('single-click-status')).toContainText('Single click completed.');
   await page.getByTestId('double-click-btn').dblclick();
+  //await page.pause();
   await expect(page.getByTestId('double-click-status')).toContainText('Double click completed playwrihght.');
   await page.getByTestId('static-practice-select').selectOption('Easy');
   await expect(page.getByTestId('static-dropdown-status')).toContainText('Static dropdown selected: Easy.');
