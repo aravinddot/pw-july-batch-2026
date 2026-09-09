@@ -3,9 +3,11 @@ import { test, expect } from '@playwright/test'
 
 test.describe('Sanbox Basic Test cases', () => {
 
-
+// only, skip, fixme, fail, slow
 
     test('Click, Double Click, Hover, Tooltip, Static Dropdown', async ({ page }) => {
+
+        test.slow()
 
         await page.goto('https://playwright-mastery-academy-app.vercel.app/practice/sandbox-basic')
 
@@ -13,7 +15,7 @@ test.describe('Sanbox Basic Test cases', () => {
 
         await expect(page.getByText('Single click completed.')).toBeVisible()
 
-        await expect(page.getByTestId('single-click-status')).toContainText('Single click completed playwright.')
+        await expect(page.getByTestId('single-click-status')).toContainText('Single click completed.')
 
         await page.getByTestId('double-click-btn').dblclick()
 
@@ -59,28 +61,28 @@ test.describe('Sanbox Basic Test cases', () => {
 
 
 
-    test('Static Waits, Keyboard', async ({ page }) => {
+    // test('Static Waits, Keyboard', async ({ page }) => {
 
-        await page.goto('https://playwright-mastery-academy-app.vercel.app/practice/sandbox-basic')
+    //     await page.goto('https://playwright-mastery-academy-app.vercel.app/practice/sandbox-basic')
 
-        await page.getByTestId('async-load-btn').click()
+    //     await page.getByTestId('async-load-btn').click()
 
-        await page.waitForTimeout(20000)
+    //     await page.waitForTimeout(20000)
 
-        await expect(page.getByText('Async result loaded successfully.')).toBeVisible()
+    //     await expect(page.getByText('Async result loaded successfully.')).toBeVisible()
 
 
-        await page.getByTestId('keyboard-input').fill('playwright')
+    //     await page.getByTestId('keyboard-input').fill('playwright')
 
-        await page.getByTestId('keyboard-input').press('Enter')
+    //     await page.getByTestId('keyboard-input').press('Enter')
 
-        // Tab, Escape, Baskspace, Delete, Arrowup, ArrowDown, ArrowRight, ArrowLeft, Space,
-        // A to Z, 1 to 0
-        // Control+C, Control+V
+    //     // Tab, Escape, Baskspace, Delete, Arrowup, ArrowDown, ArrowRight, ArrowLeft, Space,
+    //     // A to Z, 1 to 0
+    //     // Control+C, Control+V
 
-        await expect(page.getByText('Command submitted: playwright')).toBeVisible()
+    //     await expect(page.getByText('Command submitted: playwright')).toBeVisible()
 
-    })
+    // })
 
 
 

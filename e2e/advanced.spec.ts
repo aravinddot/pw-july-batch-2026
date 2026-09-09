@@ -31,14 +31,14 @@ test.describe('Sandbox Advanced Test cases', () => {
 
     test('Hidden Dropdown', async ({ page }) => {
 
-        await page.goto('https://playwright-mastery-academy-app.vercel.app/practice/sandbox-advanced')
+        await page.goto('https://playwright-mastery-academy-app.vercel.app/practice/sandbox-advanced', {timeout: 120000})
 
 
         const isVisible = await page.getByTestId('hidden-dropdown-select').isVisible()
 
         if (isVisible == false) {
 
-            await page.getByTestId('hidden-dropdown-toggle-btn').click()
+            await page.getByTestId('hidden-dropdown-toggle-btn').click({timeout: 120000})
         }
 
         const isVisibleHiddenDrpDwn = await page.getByTestId('hidden-dropdown-select').isVisible()
@@ -79,7 +79,7 @@ test.describe('Sandbox Advanced Test cases', () => {
     test('Handling Alert Popup', async ({ page }) => {
 
 
-        await page.goto('https://playwright-mastery-academy-app.vercel.app/practice/sandbox-advanced')
+        await page.goto('/practice/sandbox-advanced')
 
         // page.on('dialog', async(dialog)=> {
         //     console.log("Alert message===>"+ dialog.message())

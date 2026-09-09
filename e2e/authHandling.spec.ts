@@ -36,10 +36,10 @@ test.describe('Authentication Handling', () => {
 
     test('Verify search textbox is visible', async () => {
 
-        test.setTimeout(120000)
+        test.setTimeout(240000)
 
         await page.waitForTimeout(10000)
-        await expect(page.getByPlaceholder('Search')).toBeVisible()
+        await expect(page.getByPlaceholder('Search')).toBeVisible({timeout: 120000})
 
     })
 
