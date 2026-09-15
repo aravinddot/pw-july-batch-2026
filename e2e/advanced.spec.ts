@@ -5,7 +5,7 @@ import { test, expect, chromium, firefox, webkit } from '@playwright/test'
 test.describe('Sandbox Advanced Test cases', () => {
 
 
-    test('Dynamic Dropdown', async ({ page }) => {
+    test('Dynamic Dropdown @smoke', async ({ page }) => {
 
         await page.goto('https://playwright-mastery-academy-app.vercel.app/practice/sandbox-advanced')
 
@@ -29,7 +29,7 @@ test.describe('Sandbox Advanced Test cases', () => {
 
 
 
-    test('Hidden Dropdown', async ({ page }) => {
+    test('Hidden Dropdown', {tag: ['@smoke', '@regression']}, async ({ page }) => {
 
         await page.goto('https://playwright-mastery-academy-app.vercel.app/practice/sandbox-advanced', {timeout: 120000})
 
@@ -54,7 +54,7 @@ test.describe('Sandbox Advanced Test cases', () => {
 
 
 
-    test('Boostrap dropdown', async ({ page }) => {
+    test('Boostrap dropdown @regression', async ({ page }) => {
 
 
         await page.goto('https://playwright-mastery-academy-app.vercel.app/practice/sandbox-advanced')
