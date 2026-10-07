@@ -1,0 +1,68 @@
+
+
+
+JS
+
+1) Variables - 1
+2) Data types - 1
+3) Operators - 1
+4) Array Methods - 1
+5) Object Methods - 1
+6) String & Math Methods - 1
+7) Array & Object Destructuring - 1
+8) Spread Operator & Rest Parameter - 1
+9) Async await, error handling -1
+
+
+TS
+
+1) Basic types - 1
+2) Tuples - 1
+3) Types - Union & Intersection - 1
+4) Interface - 1
+5) Enumeration - 1
+
+
+
+Playwright 
+
+1) Actions - 1
+2) Download - 1
+3) Upload - 1
+4) New Tab - 1
+5) Alert - 1
+6) Isolated context - 1
+7) Wait commands - important
+8) Element state check - 1
+9) Drag & Drop - 1
+10) CSV, Excel, JSON - 1
+11) Codegen, debug - 1
+12) Hooks - 1
+13) Multiple input - 0
+14) Auth Handling - 0
+15) Playwright config file - important
+16) CSS, Xpath, Playwright built in 
+
+Playwright Framework from Scratch
+
+API & API Authentication
+
+Mock API - Important
+
+Git & Github
+
+Github Actions - CI
+
+Azure Pipeline - CI
+
+Multiple Env Configuration
+
+
+
+AI 
+
+Prompt
+Tokens
+GEN AI, Agentic AI, MCP
+Generate Automation Test cases
+Custom agent Creation
