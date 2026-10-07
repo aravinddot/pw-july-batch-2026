@@ -13,9 +13,9 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './e2e',
-  timeout: 180000, // test timeout
+  timeout: 180000, // test timeout // 30 secs
   expect: {
-    timeout: 60000
+    timeout: 60000 // 5 secs
   },
   globalTimeout: 120 * 60 * 1000,
   /* Run tests in files in parallel */
@@ -32,8 +32,8 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: 'https://playwright-mastery-academy-app.vercel.app',
-    actionTimeout: 60000,
-    navigationTimeout: 60000,
+    actionTimeout: 60000, // 30 secs
+    navigationTimeout: 60000, // 30 secs
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     screenshot: 'on',
