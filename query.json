@@ -1,0 +1,3 @@
+{
+    "selectProduct": "select * from products"
+}
